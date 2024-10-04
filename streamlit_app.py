@@ -21,6 +21,12 @@ st.write('-----------------------------------------------')
 x = st.slider('xxx')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
 
+y = st.slider(
+    'Select a range of values',
+    0.0, 100.0, 75.0
+)
+"Point is at : ", y
+
 st.write('-----------------------------------------------')
 
 st.text_input("Your name", key="name")
@@ -57,3 +63,23 @@ another_option = st.selectbox(
 )
 
 'You selected: ', another_option
+
+st.write('-----------------------------------------------')
+
+# Add a selectbox to the sidebar:
+add_selectbox = st.sidebar.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone')
+)
+
+# Add a slider to the sidebar:
+add_slider = st.sidebar.slider(
+    'Select a range of values',
+    0.0, 100.0, (25.0, 75.0)
+)
+
+
+
+
+
+
